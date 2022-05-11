@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/principal.css">
+    <script src="https://kit.fontawesome.com/779b7a8161.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <section id="home" class="home">
+        <div class="max-width">
+            <div class="content">
+                <h1 id="welcome" class="welcome">Hola de nuevo</h1>
+                <h2 id="notes" class="notes">Tienes</h2>
+                <div>
+                    <button id="add" class="add">+ Agregar tarea</button>
+                    <button id="close" class="add">Cerrar Sesión</button>
+                </div>
+                <div class="orden">
+                    <h3>Ordenar por: </h3>
+                    <select name="order" id="orderby">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="completo">Completo</option>
+                        <option value="incompleto">Incompleto</option>
+                        <option value="nombre">Nombre</option>
+                    </select>
+                </div>
+                <table id="table" class="table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Tarea</th>
+                            <th>Descripcion</th>
+                            <th>Estatus</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items"></tbody>
+                </table>
+                <div id="foot" class="foot">
+                    <h1>No tienes tareas. Intenta agregar una nueva.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="modal-content" class="modal-content">
+            <div class="modal">
+                <h1>Registra tu nueva tarea.</h1>
+                <h2>Tarea:</h2>
+                <input type="text" id="modal-todo"></input>
+                <h2>Descripción:</h2>
+                <textarea id="modal-desc" cols="30" rows="10"></textarea>
+                <div class="modal-btn">
+                    <button id="btn-insert">Agregar</button>
+                    <button id="btn-cancel">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Aqui se va crear o generar la parte del template que se va a realizar 
+        es solo una idea de implementacion-->
+      <script type="module" src="js/principal.js"></script>
+</body>
+</html>
